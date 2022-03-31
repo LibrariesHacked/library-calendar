@@ -1,26 +1,47 @@
-import * as React from "react";
+import React from 'react'
 
-import Container from "@mui/material/Container";
-import CssBaseline from "@mui/material/CssBaseline";
+import CssBaseline from '@mui/material/CssBaseline'
 
-import { ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from '@mui/material/styles'
 
-import EventCalendar from "./EventCalendar";
-import theme from "./theme.js";
+import CalendarApplication from './CalendarApplication'
 
-function App() {
+import theme from './theme'
+
+import { ApplicationStateProvider } from './context/applicationState'
+import { SearchStateProvider } from './context/searchState'
+import { ViewStateProvider } from './context/viewState'
+import {
+  initialApplicationState,
+  applicationReducer,
+  initialSearchState,
+  searchReducer,
+  initialViewState,
+  viewReducer
+} from './state'
+
+function App () {
   return (
-    <div>
-      <React.Fragment>
-        <CssBaseline />
-        <Container maxWidth="lg">
+    <ApplicationStateProvider
+      initialState={initialApplicationState}
+      reducer={applicationReducer}
+    >
+      <SearchStateProvider
+        initialState={initialSearchState}
+        reducer={searchReducer}
+      >
+        <ViewStateProvider
+          initialState={initialViewState}
+          reducer={viewReducer}
+        >
           <ThemeProvider theme={theme}>
-            <EventCalendar />
+            <CssBaseline />
+            <CalendarApplication />
           </ThemeProvider>
-        </Container>
-      </React.Fragment>
-    </div>
-  );
+        </ViewStateProvider>
+      </SearchStateProvider>
+    </ApplicationStateProvider>
+  )
 }
 
-export default App;
+export default App

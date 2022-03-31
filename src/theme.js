@@ -1,10 +1,20 @@
-import { createTheme } from "@mui/material/styles";
-import { orange } from "@mui/material/colors";
+import { createTheme } from '@mui/material/styles'
+
+import { lightBlue, blueGrey } from '@mui/material/colors'
 
 const theme = createTheme({
-  status: {
-    danger: orange[500],
-  },
-});
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none'
+        },
+        text: {
+          textTransform: 'none'
+        }
+      }
+    }
+  }
+})
 
-export default theme;
+export default theme
