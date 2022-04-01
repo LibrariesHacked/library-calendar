@@ -50,7 +50,7 @@ function CalendarApplication () {
         <Container maxWidth='lg'>
           <main>
             <Routes>
-              <Route path='/' render={() => <EventCalendar />} />
+              <Route path='/' element={<EventCalendar />} />
             </Routes>
           </main>
         </Container>
