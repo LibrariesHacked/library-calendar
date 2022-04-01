@@ -6,7 +6,6 @@ import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress'
 
 import EventCalendar from './EventCalendar'
-import Header from './Header'
 import Footer from './Footer'
 import MarkdownPage from './MarkdownPage'
 import Notification from './Notification'
@@ -37,8 +36,7 @@ function CalendarApplication () {
 
   return (
     <BrowserRouter>
-      <div>
-        <Header site={3} loading={loading} />
+      <>
         {loading ? (
           <LinearProgress
             variant='buffer'
@@ -54,11 +52,7 @@ function CalendarApplication () {
             </Routes>
           </main>
         </Container>
-        <Container maxWidth='lg'>
-          <Footer />
-        </Container>
-        <Notification />
-      </div>
+      </>
     </BrowserRouter>
   )
 }
