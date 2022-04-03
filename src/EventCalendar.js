@@ -6,11 +6,13 @@ import './custom.scss'
 
 const localizer = momentLocalizer(moment) // or globalizeLocalizer
 
+const events = require('./helpers/events.json')
+
 function EventCalendar () {
   return (
     <Calendar
       localizer={localizer}
-      events={[]}
+      events={events}
       startAccessor='start'
       endAccessor='end'
     />
