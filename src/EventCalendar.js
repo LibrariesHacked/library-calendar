@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 
 import moment from 'moment'
@@ -10,12 +13,18 @@ const events = require('./helpers/events.json')
 
 function EventCalendar () {
   return (
-    <Calendar
-      localizer={localizer}
-      events={events}
-      startAccessor='start'
-      endAccessor='end'
-    />
+    <div
+      css={css`
+        height: 500px;
+      `}
+    >
+      <Calendar
+        localizer={localizer}
+        events={events}
+        startAccessor='start'
+        endAccessor='end'
+      />
+    </div>
   )
 }
 
