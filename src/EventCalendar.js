@@ -12,6 +12,10 @@ const localizer = momentLocalizer(moment) // or globalizeLocalizer
 const events = require('./helpers/events.json')
 
 function EventCalendar () {
+  const selectEvent = event => {
+    alert(event.title)
+  }
+
   const newEvents = events.map(event => {
     return {
       id: event.id,
@@ -31,6 +35,8 @@ function EventCalendar () {
         events={newEvents}
         startAccessor='start'
         endAccessor='end'
+        popup={true}
+        onSelectEvent={selectEvent}
       />
     </div>
   )
