@@ -6,14 +6,6 @@ import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress'
 
 import EventCalendar from './EventCalendar'
-import Footer from './Footer'
-import MarkdownPage from './MarkdownPage'
-import Notification from './Notification'
-
-import About from './pages/about.md'
-import Accessibility from './pages/accessibility.md'
-import Data from './pages/data.md'
-import Privacy from './pages/privacy.md'
 
 import { useApplicationStateValue } from './context/applicationState'
 import { useViewStateValue } from './context/viewState'
@@ -27,12 +19,6 @@ function CalendarApplication () {
   useEffect(() => {}, [dispatchApplication, dispatchView, dispatchSearch])
 
   const loading = false
-
-  const Page404 = () => (
-    <div>
-      <h2>Sorry! That page was not found</h2>
-    </div>
-  )
 
   return (
     <BrowserRouter>

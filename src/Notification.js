@@ -7,7 +7,7 @@ import { useViewStateValue } from './context/viewState'
 
 function Notification () {
   const [
-    { notificationOpen, notificationSeverity, notificationMessage },
+    { notificationOpen, notificationMessage },
     dispatchView
   ] = useViewStateValue() //eslint-disable-line
 
