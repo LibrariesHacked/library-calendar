@@ -19,9 +19,6 @@ const theme = createTheme({
       styleOverrides: {
         root: {
           textTransform: 'none'
-        },
-        text: {
-          textTransform: 'none'
         }
       }
     },

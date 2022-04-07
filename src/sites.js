@@ -1,5 +1,6 @@
 import BookIcon from '@mui/icons-material/BookTwoTone'
 import DirectionBusIcon from '@mui/icons-material/DirectionsBusTwoTone'
+import EventIcon from '@mui/icons-material/EventNoteTwoTone'
 import GridOnIcon from '@mui/icons-material/GridOnTwoTone'
 import HeadsetIcon from '@mui/icons-material/HeadsetTwoTone'
 import LocalLibraryIcon from '@mui/icons-material/LocalLibraryTwoTone'
@@ -103,16 +104,10 @@ const sites = [
     icon: <MapIcon />,
     links: [
       {
-        title: 'Find my library',
-        short: 'Find',
-        icon: <GridOnIcon />,
+        title: 'Event calendar',
+        short: 'Month',
+        icon: <EventIcon />,
         to: '/'
-      },
-      {
-        title: 'Map of libraries',
-        short: 'Map',
-        icon: <MapIcon />,
-        to: '/map'
       }
     ]
   }
