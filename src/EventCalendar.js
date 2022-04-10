@@ -7,13 +7,23 @@ import moment from 'moment'
 
 import './custom.scss'
 
+import { useSearchStateValue } from './context/searchState'
+import { useViewStateValue } from './context/viewState'
+
 const localizer = momentLocalizer(moment) // or globalizeLocalizer
 
 const events = require('./helpers/events.json')
 
 function EventCalendar () {
+  const [{ currentEvent }, dispatchSearch] = useSearchStateValue() //eslint-disable-line
+  const [{ eventDialogOpen }, dispatchView] = useViewStateValue() //eslint-disable-line
+
   const selectEvent = event => {
-    alert(event.title)
+    dispatchSearch({
+      type: 'SetCurrentEvent',
+      currentEvent: event
+    })
+    dispatchView({ type: 'SetEventDialog', eventDialogOpen: true })
   }
 
   const newEvents = events.map(event => {

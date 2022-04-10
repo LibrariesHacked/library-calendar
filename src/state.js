@@ -7,10 +7,14 @@ const applicationReducer = (state, action) => {
   }
 }
 
-const initialSearchState = {}
+const initialSearchState = {
+  currentEvent: null
+}
 
 const searchReducer = (state, action) => {
   switch (action.type) {
+    case 'SetCurrentEvent':
+      return { ...state, currentEvent: action.currentEvent }
     default:
       return state
   }
@@ -19,7 +23,8 @@ const searchReducer = (state, action) => {
 const initialViewState = {
   notificationOpen: false,
   notificationSeverity: '',
-  notificationMessage: ''
+  notificationMessage: '',
+  eventDialogOpen: false
 }
 
 const viewReducer = (state, action) => {
@@ -33,6 +38,8 @@ const viewReducer = (state, action) => {
       }
     case 'CloseNotification':
       return { ...state, notificationOpen: false }
+    case 'SetEventDialog':
+      return { ...state, eventDialogOpen: action.eventDialogOpen }
     default:
       return state
   }

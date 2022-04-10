@@ -6,6 +6,7 @@ import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress'
 
 import EventCalendar from './EventCalendar'
+import EventDetails from './EventDetails'
 import Header from './Header'
 
 import { useApplicationStateValue } from './context/applicationState'
@@ -40,6 +41,7 @@ function CalendarApplication () {
             </Routes>
           </main>
         </Container>
+        <EventDetails />
       </>
     </BrowserRouter>
   )
