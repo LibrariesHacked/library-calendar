@@ -101,11 +101,11 @@ const sites = [
   {
     title: 'Library calendar',
     url: 'https://www.librarycalendar.co.uk',
-    icon: <MapIcon />,
+    icon: <EventIcon />,
     links: [
       {
-        title: 'Event calendar',
-        short: 'Month',
+        title: 'Events calendar',
+        short: 'Events',
         icon: <EventIcon />,
         to: '/'
       }
