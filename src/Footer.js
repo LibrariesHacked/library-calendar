@@ -1,3 +1,6 @@
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react'
+
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -8,11 +11,15 @@ import Typography from '@mui/material/Typography'
 
 function Footer () {
   return (
-    <div>
+    <div
+      css={css`
+        padding-top: 20px;
+      `}
+    >
       <Divider />
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
-          <Typography variant='button'>
+          <Typography>
             <MaterialLink
               href='https://www.librarylab.uk/libraries-at-home'
               target='_blank'
@@ -55,10 +62,7 @@ function Footer () {
               GitHub
             </MaterialLink>
           </Typography>
-          <br />
-          <Typography variant='body2'>
-            A Library Lab project by Libraries Hacked.
-          </Typography>
+          <Typography>A Library Lab project by Libraries Hacked.</Typography>
         </Grid>
         <Grid item xs={12} sm={6} md={6} lg={6} xl={6}></Grid>
       </Grid>
