@@ -8,7 +8,6 @@ import LinearProgress from '@mui/material/LinearProgress'
 import EventCalendar from './EventCalendar'
 import EventDetails from './EventDetails'
 import Footer from './Footer'
-import Header from './Header'
 
 import { useApplicationStateValue } from './context/applicationState'
 import { useViewStateValue } from './context/viewState'
@@ -26,7 +25,6 @@ function CalendarApplication () {
   return (
     <BrowserRouter>
       <>
-        <Header site={4} loading={loading} />
         {loading ? (
           <LinearProgress
             variant='buffer'
