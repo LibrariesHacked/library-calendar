@@ -1,31 +1,33 @@
-$out-of-range-color: lighten(#333, 40%) !default;
-$out-of-range-bg-color: lighten(#333, 70%) !default;
+@use 'sass:math';
 
-$calendar-border: #f5f5f5 !default;
-$cell-border: #fafafa !default;
+$out-of-range-color: lighten(#333, 40%);
+$out-of-range-bg-color: lighten(#333, 70%);
 
-$border-color: #f5f5f5 !default;
+$calendar-border: #ddd;
+$cell-border: #ddd;
 
-$segment-width: percentage(math.div(1, 7)) !default;
+$border-color: #ccc;
 
-$time-selection-color: white !default;
-$time-selection-bg-color: rgba(0, 0, 0, 0.5) !default;
-$date-selection-bg-color: rgba(0, 0, 0, 0.1) !default;
+$segment-width: percentage(math.div(1, 7));
 
-$event-bg: #2196f3 !default;
-$event-border: darken(#2196f3, 10%) !default;
-$event-outline: #1e88e5 !default;
-$event-color: #fff !default;
-$event-border-radius: 5px !default;
-$event-padding: 3px 6px !default;
-$event-zindex: 4 !default;
+$time-selection-color: white;
+$time-selection-bg-color: rgba(0, 0, 0, 0.5);
+$date-selection-bg-color: rgba(0, 0, 0, 0.1);
 
-$btn-color: #607d8b !default;
-$btn-bg: #fff !default;
-$btn-border: #cfd8dc !default;
+$event-bg: #3174ad;
+$event-border: darken(#3174ad, 10%);
+$event-outline: #3b99fc;
+$event-color: #fff;
+$event-border-radius: 5px;
+$event-padding: 2px 5px;
+$event-zindex: 4;
 
-$current-time-color: #66bb6a !default;
+$btn-color: #373a3c;
+$btn-bg: #fff;
+$btn-border: #ccc;
 
-$rbc-css-prefix: rbc-i !default;
+$current-time-color: #74ad31;
 
-$today-highlight-bg: #eceff1 !default;
+$rbc-css-prefix: rbc-i;
+
+$today-highlight-bg: #e5e5e5;

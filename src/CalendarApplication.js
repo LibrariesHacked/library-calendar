@@ -42,7 +42,7 @@ function CalendarApplication () {
               padding: '10px'
             }}
           >
-            <img src='logo_circle_128.png' alt='Library calendar logo' />
+            <img src='logo_128.png' alt='Library calendar logo' />
             <Typography variant='h3' component='h1' gutterBottom>
               Library calendar
             </Typography>
