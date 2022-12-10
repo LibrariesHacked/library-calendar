@@ -2,8 +2,10 @@ import React, { useEffect } from 'react'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress'
+import Typography from '@mui/material/Typography'
 
 import EventCalendar from './EventCalendar'
 import EventDetails from './EventDetails'
@@ -34,13 +36,23 @@ function CalendarApplication () {
           />
         ) : null}
         <Container maxWidth='lg'>
+          <Box
+            sx={{
+              textAlign: 'center'
+            }}
+          >
+            <img src='logo_smallest_circle.png' alt='Library calendar logo' />
+            <Typography variant='h3' component='h1' gutterBottom>
+              Library calendar
+            </Typography>
+          </Box>
           <main>
             <Routes>
               <Route path='/' element={<EventCalendar />} />
             </Routes>
           </main>
         </Container>
-        <Container maxWidth='lg'>
+        <Container maxWidth='lg' sx={{ paddingTop: '5px' }}>
           <Footer />
         </Container>
         <EventDetails />
