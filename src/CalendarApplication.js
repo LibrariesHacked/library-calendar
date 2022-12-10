@@ -38,10 +38,11 @@ function CalendarApplication () {
         <Container maxWidth='lg'>
           <Box
             sx={{
-              textAlign: 'center'
+              textAlign: 'center',
+              padding: '10px'
             }}
           >
-            <img src='logo_smallest_circle.png' alt='Library calendar logo' />
+            <img src='logo_circle_128.png' alt='Library calendar logo' />
             <Typography variant='h3' component='h1' gutterBottom>
               Library calendar
             </Typography>
