@@ -43,8 +43,20 @@ function CalendarApplication () {
             }}
           >
             <img src='logo_128.png' alt='Library calendar logo' />
-            <Typography variant='h3' component='h1' gutterBottom>
+            <Typography variant='h2' component='h1'>
               Library calendar
+            </Typography>
+            <Typography
+              variant='h5'
+              component='p'
+              gutterBottom
+              sx={{
+                backgroundColor: '#fafafa',
+                padding: '10px',
+                borderRadius: '5px'
+              }}
+            >
+              Key dates in the public library year
             </Typography>
           </Box>
           <main>

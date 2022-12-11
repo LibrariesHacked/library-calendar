@@ -1,12 +1,12 @@
 @use 'sass:math';
 
-$out-of-range-color: lighten(#333, 40%);
-$out-of-range-bg-color: lighten(#333, 70%);
+$out-of-range-color: lighten(#424242, 40%);
+$out-of-range-bg-color: lighten(#424242, 70%);
 
-$calendar-border: #ddd;
-$cell-border: #ddd;
+$calendar-border: #fafafa;
+$cell-border: #fafafa;
 
-$border-color: #ccc;
+$border-color: #f5f5f5;
 
 $segment-width: percentage(math.div(1, 7));
 
@@ -14,20 +14,20 @@ $time-selection-color: white;
 $time-selection-bg-color: rgba(0, 0, 0, 0.5);
 $date-selection-bg-color: rgba(0, 0, 0, 0.1);
 
-$event-bg: #3174ad;
-$event-border: darken(#3174ad, 10%);
-$event-outline: #3b99fc;
+$event-bg: #12aae4;
+$event-border: darken(#1769a5, 10%);
+$event-outline: #1769a5;
 $event-color: #fff;
-$event-border-radius: 5px;
-$event-padding: 2px 5px;
+$event-border-radius: 4px;
+$event-padding: 3px 8px;
 $event-zindex: 4;
 
-$btn-color: #373a3c;
+$btn-color: #424242;
 $btn-bg: #fff;
-$btn-border: #ccc;
+$btn-border: #f5f5f5;
 
 $current-time-color: #74ad31;
 
 $rbc-css-prefix: rbc-i;
 
-$today-highlight-bg: #e5e5e5;
+$today-highlight-bg: #f5f5f5;
