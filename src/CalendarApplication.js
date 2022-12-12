@@ -2,18 +2,23 @@ import React, { useEffect } from 'react'
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import Box from '@mui/material/Box'
 import Container from '@mui/material/Container'
 import LinearProgress from '@mui/material/LinearProgress'
-import Typography from '@mui/material/Typography'
 
 import EventCalendar from './EventCalendar'
 import EventDetails from './EventDetails'
+import Header from './Header'
 import Footer from './Footer'
+
+import { MemoMarkdownPage } from './MarkdownPage'
 
 import { useApplicationStateValue } from './context/applicationState'
 import { useViewStateValue } from './context/viewState'
 import { useSearchStateValue } from './context/searchState'
+
+import About from './pages/about.md'
+import Accessibility from './pages/accessibility.md'
+import Privacy from './pages/privacy.md'
 
 function CalendarApplication () {
   const [{}, dispatchView] = useViewStateValue() //eslint-disable-line
@@ -36,32 +41,25 @@ function CalendarApplication () {
           />
         ) : null}
         <Container maxWidth='lg'>
-          <Box
-            sx={{
-              textAlign: 'center',
-              padding: '10px'
-            }}
-          >
-            <img src='logo_128.png' alt='Library calendar logo' />
-            <Typography variant='h2' component='h1'>
-              Library calendar
-            </Typography>
-            <Typography
-              variant='h5'
-              component='p'
-              gutterBottom
-              sx={{
-                backgroundColor: '#fafafa',
-                padding: '10px',
-                borderRadius: '5px'
-              }}
-            >
-              Key dates in the public library year
-            </Typography>
-          </Box>
+          <Header />
           <main>
             <Routes>
               <Route path='/' element={<EventCalendar />} />
+              <Route
+                path='/about'
+                exact
+                element={<MemoMarkdownPage page={About} />}
+              />
+              <Route
+                path='/accessibility'
+                exact
+                element={<MemoMarkdownPage page={Accessibility} />}
+              />
+              <Route
+                path='/privacy'
+                exact
+                element={<MemoMarkdownPage page={Privacy} />}
+              />
             </Routes>
           </main>
         </Container>
