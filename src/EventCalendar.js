@@ -5,8 +5,6 @@ import { Calendar, momentLocalizer } from 'react-big-calendar'
 
 import moment from 'moment'
 
-import './custom.scss'
-
 import { useSearchStateValue } from './context/searchState'
 import { useViewStateValue } from './context/viewState'
 

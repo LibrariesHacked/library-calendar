@@ -7,12 +7,18 @@ import LinearProgress from '@mui/material/LinearProgress'
 
 import EventCalendar from './EventCalendar'
 import EventDetails from './EventDetails'
-import Footer from './Footer'
 import Header from './Header'
+import Footer from './Footer'
+
+import { MemoMarkdownPage } from './MarkdownPage'
 
 import { useApplicationStateValue } from './context/applicationState'
 import { useViewStateValue } from './context/viewState'
 import { useSearchStateValue } from './context/searchState'
+
+import About from './pages/about.md'
+import Accessibility from './pages/accessibility.md'
+import Privacy from './pages/privacy.md'
 
 function CalendarApplication () {
   const [{}, dispatchView] = useViewStateValue() //eslint-disable-line
@@ -26,7 +32,6 @@ function CalendarApplication () {
   return (
     <BrowserRouter>
       <>
-        <Header site={4} loading={loading} />
         {loading ? (
           <LinearProgress
             variant='buffer'
@@ -36,13 +41,29 @@ function CalendarApplication () {
           />
         ) : null}
         <Container maxWidth='lg'>
+          <Header />
           <main>
             <Routes>
               <Route path='/' element={<EventCalendar />} />
+              <Route
+                path='/about'
+                exact
+                element={<MemoMarkdownPage page={About} />}
+              />
+              <Route
+                path='/accessibility'
+                exact
+                element={<MemoMarkdownPage page={Accessibility} />}
+              />
+              <Route
+                path='/privacy'
+                exact
+                element={<MemoMarkdownPage page={Privacy} />}
+              />
             </Routes>
           </main>
         </Container>
-        <Container maxWidth='lg'>
+        <Container maxWidth='lg' sx={{ paddingTop: '5px' }}>
           <Footer />
         </Container>
         <EventDetails />
