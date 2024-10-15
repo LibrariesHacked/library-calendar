@@ -9,7 +9,7 @@
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.0",
     "@mui/styles": "^5.11.0",
-    "markdown-to-jsx": "^7.1.8",
+    "markdown-to-jsx": "^7.4.0",
     "moment": "^2.29.4",
     "react": "^17.0.2",
     "react-big-calendar": "^0.40.8",
